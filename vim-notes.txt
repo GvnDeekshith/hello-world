@@ -1,0 +1,28 @@
+Important notes from https://github.com/iggredible/Learn-Vim:
+> Use :help (or) :h command extensively to understand what more the command has to offer us. It may contain different flags we can include beside the command along with its own description.
+> Vim has three modes - 
+	normal mode (for navigation and manipulation)
+	insert mode (for editing text)
+	command mode (for executing commands). 
+	While using :h, pay attention to which mode the vim editor is in.
+	Append i_ to :h to get info about that command in that mode. Eg: :h i_CTRL-P provides info about the command CTRL-P in insert mode.
+> Vim in command mode has an option to rename the file name - edit.
+	1. Type vim in shell and hit enter. A buffer is created without name or extension.
+	2. Inside vim editor, hit esc (entering command mode) and type :edit file1.txt and hit enter. Now, the buffer is saved as file1.txt.
+> Vim in command mode has an option to search for the file name - find.
+	1. The difference with edit is that :find finds file in path, :edit doesn't.
+	2. By default find works in the home directory. But we can ask vim editor to find files in another path by setting different path -
+		:set path+=$PWD/** ($PWD is the current working directory. If you try to add your entire project to path hoping to make all files reachable upon a tab press)
+> If you need to find in files (find phrases in files), you can use grep.
+> While opening multiple windows using vim, we can use -o2 (for opening 2 horizontal windows) and -O2 (for opening 2 vertical windows).
+> If you need to suspend Vim while in the middle of editing, you can press Ctrl-z. You can also run either the :stop or :suspend command. 
+	To return to the suspended Vim, run fg from the terminal.
+> Vim file1.txt file2.txt opens files in 2 different buffers (Like tabs in windows). 
+	:buffers - to list all the buffers
+	:bnext - shift to next buffer
+	:bprevious - shift to previous buffer
+	:buffer file1.txt - shifts to the buffer where file.txt is present.
+	:bdelete - deletes buffer along with the files.
+> Vimrc is a config file generally stored in home directory with the name .vimrc
+	It helps in loading the vim editor with the pre-defined configuration from .vimrc
+> netrw is Vim's built-in file explorer. Use vim . (or) inside vim type :edit . to open netrw

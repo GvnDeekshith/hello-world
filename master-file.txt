@@ -1,2 +1,0 @@
-My first text file created from bash using VIM
-Modifying the file using nano editor
